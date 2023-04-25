@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+body {
+    --main-bg-color: #241C24;
+    --main-txt-color: #6b8965;
+    --white: #ffffff;
+    --big-text: 40px;
+    --big-text-bold: 900;
+    --medium-text: 32px;
+    --medium-text-bold: 700;
+    --regular-text: 21px;
+    --regular-text-bold: 400;
+}
+
+
+.green {
+    color: var(--main-txt-color);
+}
+
+.big-text {
+    font-size: var(--big-text);
+    font-weight: var(--big-text-bold);
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
+}
+
+.maincolor {
+    color: var(--main-txt-color);
+}
+
+.regular-text {
+    font-size: var(--regular-text);
+    font-weight: var(--regular-text-bold);
+    text-align: left;
+}
+
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.mainframe {
+    background-color: var(--main-bg-color);
+    height: 100vh;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.swiper {
+    width: 50vw;
+    height: 30vw;
+    border: 5px solid var(--main-txt-color);
+    border-radius: 30px;
+    --swiper-navigation-color: var(--main-txt-color);
+    --swiper-pagination-color: var(--main-txt-color);
+}
+
+.info {
+    width: 40vw;
+}
+
+.info>h2 {
+    padding: 10px;
+}
+
+.info>p {
+    padding: 5px 30px 0px;
+}
+
+
+.modal {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(107, 137, 101, 0.85);
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    transition: 2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.content {
+    background-color: var(--white);
+    width: 70vw;
+    height: 70vh;
+    padding: 40px;
+    color: #241C24;
+    border-radius: 40px;
+    position: relative;
+}
+
+
+.small-pic {
+    width: 40vw;
+    float: left;
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.head-modal {
+    font-size: var(--medium-text);
+    font-weight: var(--medium-text-bold);
+}
+
+.close {
+    width: 20%;
+    padding: 10px;
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    border-radius: 20px;
+
+}

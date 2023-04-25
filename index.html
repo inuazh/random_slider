@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="mainframe d-flex-center">
+        <div class="info d-flex-center column">
+            <h2 class="green big-text center">Тестовый слайдер для практического задания 3.5</h2>
+            <p class="green regular-text">Создадим слайдер</p>
+            <p class="green regular-text">Создадим модальное окно</p>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" id = "swiper_wrapper_id">
+                <!-- Slides -->
+                <!-- <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div> -->
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+
+    <section class="modal d-flex-center" id="modal">
+        <section class="content">
+            <img id="pic" class="small-pic">
+            <h2 id="head" class="head-modal center">Заголовок</h2>
+            <p id="desc">Описание</p>
+            <button id="close" class="close pointer">Закрыть окно</button>
+        </section>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
