@@ -71,16 +71,14 @@ desc.innerHTML = data[i].desc;
 
 // Вызов функций
 createSlider(data);
-let images = document.getElementsByTagName("img");
-for (let i = 0; i < images.length; i++) {
-images[i].onclick = function() { handleImageClick(i, data); };
-}
 
-let close = document.getElementById("close");
-
-close.onclick = function(){
-    let modal = document.getElementById("modal");
-    modal.style.opacity = 0;
-    modal.style.visibility = "hiden";
-    modal.style.transform = "scale(0)";
-}
+document.addEventListener("click", function(event) {
+    if (event.target.tagName === "IMG") {
+        handleImageClick(Array.from(event.target.parentNode.children).indexOf(event.target), data);
+    } else if (event.target.id === "close") {
+        let modal = document.getElementById("modal");
+        modal.style.opacity = 0;
+        modal.style.visibility = "hidden";
+        modal.style.transform = "scale(0)";
+    }
+});
