@@ -39,30 +39,41 @@ const swiper = new Swiper('.swiper', {
 
 
 
+// Создание слайдера
+function createSlider(data) {
 let swiper_wrapper_id = document.getElementById("swiper_wrapper_id");
 for (let i = 0; i < data.length; i++) {
-    let div = document.createElement("div");
-    div.setAttribute("class", "swiper-slide");
-    let img = document.createElement("img");
-    img.setAttribute("class", "swiper-slide")
-    img.setAttribute("src", `picture/pic${i}.jpg`);
-    div.appendChild(img);
-    swiper_wrapper_id.appendChild(div);
+let div = document.createElement("div");
+div.setAttribute("class", "swiper-slide");
+let img = document.createElement("img");
+img.setAttribute("class", "swiper-slide")
+img.setAttribute("src", `picture/pic${i}.jpg`);
+div.appendChild(img);
+swiper_wrapper_id.appendChild(div);
+}
+}
 
-    img.onclick = function () {
-        let modal = document.getElementById("modal");
-        modal.style.opacity = 1;
-        modal.style.visibility = "visible";
-        modal.style.transform = "scale(1)";
+// Обработчик клика на изображение
+function handleImageClick(i, data) {
+let modal = document.getElementById("modal");
+modal.style.opacity = 1;
+modal.style.visibility = "visible";
+modal.style.transform = "scale(1)";
 
-        let img = document.getElementById("pic");
-        let head = document.getElementById("head");
-        let desc = document.getElementById("desc");
-        pic.setAttribute("src", `picture/pic${i}.jpg`)
+let img = document.getElementById("pic");
+let head = document.getElementById("head");
+let desc = document.getElementById("desc");
+pic.setAttribute("src", `picture/pic${i}.jpg`)
 
-        head.innerHTML = data[i].name;
-        desc.innerHTML = data[i].desc;
-    }
+head.innerHTML = data[i].name;
+desc.innerHTML = data[i].desc;
+}
+
+// Вызов функций
+createSlider(data);
+let images = document.getElementsByTagName("img");
+for (let i = 0; i < images.length; i++) {
+images[i].onclick = function() { handleImageClick(i, data); };
 }
 
 let close = document.getElementById("close");
