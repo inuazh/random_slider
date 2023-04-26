@@ -49,11 +49,6 @@ for (let i = 0; i < data.length; i++) {
     div.appendChild(img);
     swiper_wrapper_id.appendChild(div);
 
-    // opacity: 0;
-    // visibility: hidden;
-    // transform: scale(0);
-
-
     img.onclick = function () {
         let modal = document.getElementById("modal");
         modal.style.opacity = 1;
